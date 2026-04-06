@@ -1,0 +1,240 @@
+@charset 'UTF-8';
+
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --cor-primaria: #1F3A5F;
+    --cor-secundaria: #4A6FA5;
+    --cor-fundo: #F4F6F8;
+    --cor-card: #FFFFFF;
+    --cor-text: #2F2F2F;
+    --cor-text-sec: #6B7280;
+    --cor-borda: #E5E7EB;
+
+    --cor-sucesso: #2E7D32;
+    --cor-acao: #1976D2;
+    --cor-perigo: #C62828;
+    --cor-alerta: #ED6C02;
+}
+
+body {
+    background-color: var(--cor-fundo);
+}
+
+/* Estilos do Header */
+header {
+    align-items: center;
+    background-color: var(--cor-primaria);
+    color: #FFFFFF;
+    display: flex;
+    height: 70px;
+    justify-content: center;
+}
+
+
+/* Estilos da seção que adiciona produtos */
+.secao_adicao_produtos {
+    align-items: center;
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    display: flex;
+    flex-flow: column;
+    gap: 8px;
+    margin: 8px 0 8px 0;
+}
+
+.inputsAdicao {
+    align-items: center;
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 4px;
+    margin: 8px 0 8px 0;
+}
+
+input {
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    padding: 4px;
+}
+
+input:focus {
+    outline: none;
+    border: 1px solid var(--cor-acao);
+}
+
+#adicionar, .editar {
+    background-color: var(--cor-sucesso);
+    border: 1px solid lightgrey;
+    border-radius: 4px;
+    color: #FFFFFF;
+    margin-bottom: 4px;
+    padding: 4px 8px;
+}
+
+/* Estilos da seção Totais */
+#secao_totais {
+    align-items: center;
+    background-color: var(--cor-card);
+    border-bottom: 1px solid var(--cor-borda);
+    color: var(--cor-text);
+    display: flex;
+    flex-flow: column nowrap;
+    font-size: .7rem;
+    gap: 12px;
+    justify-content: center;
+    padding: 16px 4px;
+}
+
+.totais {
+    display: flex;
+    gap: 35px;
+}
+
+.secao_filtros {
+    background-color: var(--cor-card);
+    border-bottom: 1px solid var(--cor-borda);
+    display: flex;
+    flex-flow: column wrap;
+    font-size: .7rem;
+    gap: 8px;
+    margin-top: 8px;
+    padding: 8px;
+}
+
+.secao_filtros > h2 {
+    margin-bottom: 8px;
+    text-align: center;
+}
+
+.filtros {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 16px;
+}
+
+.limpar {
+    align-self: center;
+    background-color: var(--cor-perigo);
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 4px 8px;
+}
+
+
+/* Estilos da lista */
+#lista {
+    align-items: center;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 12px;
+}
+
+.item_lista {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 12px;
+    padding: 12px;
+}
+
+.item_lista:hover {
+    background-color: #F9FAFB;
+}
+
+.excluir {
+    background-color: var(--cor-perigo);
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+    padding: 4px;
+}
+
+.pop_up {
+    background-color: var(--cor-card);
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    color: var(--cor-text);
+    display: none;
+    font-weight: bold;
+    left: 50%;
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pop_up-botoes {
+    margin-top: 8px;
+}
+
+.pop_up-botoes > button {
+    margin: 8px 12px;
+    padding: 4px;
+}
+
+.pop_up-sim {
+    background-color: var(--cor-perigo);
+    border: none;
+    border-radius: 4px;
+    color: #FFFFFF;
+}
+
+.pop_up-nao {
+    background-color: transparent;
+    border: 1px solid var(--cor-borda);
+    border-radius: 4px;
+    color: var(--cor-text);
+}
+
+@media screen and (min-width: 375px){
+    #secao_totais, .secao_filtros {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (min-width: 425px){
+    #secao_totais, .secao_filtros {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (min-width: 600px){
+    .filtros {
+        align-items: center;
+        flex-flow: row nowrap;
+        gap: 52px;
+        justify-content: center;
+        padding-bottom: 12px;
+    }
+}
+
+@media screen and (min-width: 935px){
+    .secao_adicao_produtos {
+        flex-flow: row nowrap;
+        justify-content: center;
+        height: 100px;
+        padding: 8px;
+    }
+
+    .inputsAdicao {
+        flex-flow: row nowrap;
+        margin: 0;
+    }
+
+    .secao_lista {
+        margin-top: 8px;
+    }
+}
+
+

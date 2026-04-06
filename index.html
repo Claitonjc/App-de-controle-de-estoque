@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Controle de produtos</title>
+</head>
+<body>
+    <!-- Cabeçalho da página -->
+    <header>
+        <h1>Controle de produtos</h1>
+    </header>
+
+    <!-- Corpo da página -->
+    <main>
+        <!-- Seção que adiciona produtos -->
+        <form class="secao_adicao_produtos">
+            <label class="inputsAdicao">
+                Produto:
+                <input type="text" name="produto" id="produto" placeholder="Nome do produto">
+            </label>
+            <label class="inputsAdicao">
+                Preço:
+                <input type="number" min="0" name="preco" id="preco" placeholder="Preço do produto">
+            </label>
+            <label class="inputsAdicao">
+                Quantidade:
+                <input type="number" min="0" name="quantidade" id="quantidade" placeholder="Quantidade do produto">
+            </label>
+            <button type="submit" id="adicionar">Adicionar</button>
+        </form>
+
+        <!-- Seção dos resultados totais -->
+        <section id="secao_totais">
+            <h2>Totais</h2>
+            <section class="totais">
+                <article class="totais-quantidade">
+                    <span>Estoque Total:</span>
+                    <span id="estoque_total"></span>
+                </article>
+                <article class="totais-valor">
+                    <span>Valor Total:</span>
+                    <span id="valor_Total"></span>
+                </article>
+            </section>
+        </section>
+        <section class="secao_filtros">
+            <h2>Filtros</h2>
+            <section class="filtros">
+                <label>
+                    Filtro:
+                    <select name="filtro" id="filtro">
+                        <option value="nome" selected>Nome</option>
+                        <option value="preco">Preço</option>
+                        <option value="quantidade">Quantidade</option>
+                    </select>
+                </label>
+                <label>
+                    Buscar Produto:
+                    <input type="text" id="buscar" placeholder="Nome do produto">
+                </label>
+                <button type="button" class="limpar">Excluir tudo</button>
+            </section>
+        </section>
+
+        <!-- Seção da lista de produtos -->
+        <section class="secao_lista">
+            <ul id="lista">
+
+            </ul>
+        </section>
+        <section class="pop_up" role="dialog" aria-modal="true">
+            <p>Tem certeza que deseja excluir?</p>
+            <article class="pop_up-botoes">
+                <button type="button" class="pop_up-sim">Sim</button>
+                <button type="button" class="pop_up-nao">Não</button>
+            </article>
+        </section>
+    </main>
+
+    <script type="module" src="/js/main.js"></script>
+</body>
+</html>
