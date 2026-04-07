@@ -10,7 +10,7 @@ export const filtros = (value) => {
         quantidade: (a, b) => a.quantidade - b.quantidade
     };
 
-    setProdutosOrdenados(produtos.sort(metodos[value]));
+    setProdutosOrdenados([...produtos].sort(metodos[value]));
 
 
 
