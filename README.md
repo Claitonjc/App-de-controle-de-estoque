@@ -94,6 +94,12 @@ http://localhost:5500
 
 ---
 
+## Deploy
+
+https://claitonjc.github.io/App-de-controle-de-estoque/
+
+---
+
 ## 🧑‍💻 Sobre o projeto
 
 Este projeto foi desenvolvido com o objetivo de consolidar conceitos fundamentais de JavaScript moderno, simulando uma aplicação real com arquitetura organizada e escalável.
